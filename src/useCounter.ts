@@ -2,7 +2,10 @@ import { useState } from 'react';
 
 export default function useCounter(
   initial: number = 0,
-  { min = Infinity, max = Infinity }: { min: number; max: number }
+  { min = Infinity, max = Infinity }: { min?: number; max?: number } = {
+    min: Infinity,
+    max: Infinity,
+  }
 ) {
   const [value, setValue] = useState(initial);
 
@@ -18,3 +21,5 @@ export default function useCounter(
 
   return { value, increment, decrement, add, remove };
 }
+
+useCounter(1, {});
