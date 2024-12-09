@@ -21,5 +21,3 @@ export default function useCounter(
 
   return { value, increment, decrement, add, remove };
 }
-
-useCounter(1, {});
