@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
+import { number } from 'yargs';
 
-export default function useWindowScroll() {
+export default function useWindowScroll(): [number, number] {
   const [scrollPosition, setScrollPosition] = useState({ x: 0, y: 0 });
 
   useEffect(() => {

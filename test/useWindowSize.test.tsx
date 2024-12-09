@@ -3,11 +3,11 @@ import { render, screen, act } from '@testing-library/react';
 import useWindowSize from '../src/useWindowSize';
 
 function TestComponent() {
-  const size = useWindowSize();
+  const [width, height] = useWindowSize();
   return (
     <div>
-      <span data-testid="width">{size.width}</span>
-      <span data-testid="height">{size.height}</span>
+      <span data-testid="width">{width}</span>
+      <span data-testid="height">{height}</span>
     </div>
   );
 }
